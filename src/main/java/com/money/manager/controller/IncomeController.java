@@ -22,6 +22,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("incomes")
+@CrossOrigin("*")
 public class IncomeController {
 	
 	private final IncomeService incomeService;
