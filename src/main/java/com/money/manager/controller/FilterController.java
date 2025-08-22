@@ -19,6 +19,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/filter")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class FilterController {
 	private final ExpenseService expenseService;
 	private final IncomeService incomeService;
