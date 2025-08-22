@@ -14,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/dashboard")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class DashBoardController {
 	private final DashBoardService dashBoardService;
 	
