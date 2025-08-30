@@ -62,16 +62,15 @@ public class SecurityConfig {
 		return new BCryptPasswordEncoder();
 	}
 	
-	@Bean
 	public CorsConfigurationSource configuration() {
-		CorsConfiguration config=new CorsConfiguration();
-		config.setAllowedOriginPatterns(List.of("*"));
-		config.setAllowedMethods(List.of("POST","GET","DELETE","PUT","OPTIONS"));
-		config.setAllowedHeaders(List.of("Authorization","Content-Type","Accept"));
-		config.setAllowCredentials(true);
-		UrlBasedCorsConfigurationSource source=new UrlBasedCorsConfigurationSource();
-		source.registerCorsConfiguration("/**", config);
-		return source;
+	    CorsConfiguration config = new CorsConfiguration();
+	    config.setAllowedOriginPatterns(List.of("http://localhost:3000")); // frontend URL
+	    config.setAllowedMethods(List.of("POST","GET","DELETE","PUT","OPTIONS"));
+	    config.setAllowedHeaders(List.of("Authorization","Content-Type","Accept"));
+	    config.setAllowCredentials(true);
+	    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+	    source.registerCorsConfiguration("/**", config);
+	    return source;
 	}
 	
 	@Bean

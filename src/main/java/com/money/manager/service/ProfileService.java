@@ -56,6 +56,7 @@ public class ProfileService {
 				.id(profileDto.getId())
 				.fullName(profileDto.getFullName())
 				.email(profileDto.getEmail())
+				.profileImageUrl(profileDto.getProfileImageUrl())
 				.password(encoder.encode(profileDto.getPassword()))
 				.createdAt(profileDto.getCreatedAt())
 				.updateAt(profileDto.getUpdateAt())

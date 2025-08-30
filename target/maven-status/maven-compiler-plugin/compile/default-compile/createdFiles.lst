@@ -12,12 +12,14 @@ com\money\manager\dto\IncomeDto.class
 com\money\manager\dto\AuthDto.class
 com\money\manager\dto\AuthDto$AuthDtoBuilder.class
 com\money\manager\controller\IncomeController.class
+com\money\manager\controller\EmailController.class
 com\money\manager\dto\ExpenseDto$ExpenseDtoBuilder.class
 com\money\manager\entity\CategoryEntity$CategoryEntityBuilder.class
 com\money\manager\security\SecurityConfig.class
 com\money\manager\entity\IncomeEntity.class
 com\money\manager\repository\CategoryRepository.class
 com\money\manager\service\CategoryService.class
+com\money\manager\controller\ExcelController.class
 com\money\manager\service\NotificationService.class
 com\money\manager\service\IncomeService.class
 com\money\manager\MoneyManagerApplication.class
@@ -29,6 +31,7 @@ com\money\manager\entity\ExpenseEntity$ExpenseEntityBuilder.class
 com\money\manager\entity\CategoryEntity.class
 com\money\manager\dto\ProfileDto.class
 com\money\manager\controller\CategoryController.class
+com\money\manager\service\ExcelService.class
 com\money\manager\util\JwtUtils.class
 com\money\manager\controller\HomeController.class
 com\money\manager\repository\ProfileRepository.class

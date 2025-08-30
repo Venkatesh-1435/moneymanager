@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,11 +19,13 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class ProfileController {
 	private final ProfileService service;
 	
 	@PostMapping("/register")
 	public ResponseEntity<ProfileDto> register(@RequestBody ProfileDto dto){
+		System.out.println(dto.getProfileImageUrl());
 		return new ResponseEntity<>(service.registerProfile(dto),HttpStatus.CREATED);
 	}
 	
@@ -53,6 +56,12 @@ public class ProfileController {
 	@GetMapping("/test")
 	public String check() {
 		return "your jwt work succesfully";
+	}
+	
+	@GetMapping("/profile")
+	public ResponseEntity<?> getPublicProfile(){
+		ProfileDto dto=service.getPublicProfileDto(null);
+		return ResponseEntity.ok(dto);
 	}
 	
 	
